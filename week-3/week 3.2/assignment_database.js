@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://rizon:rizon11@cluster0.rxhihwl.mongodb.net/userappnew"
+  "mongodb+srv:"
 );
 
 const User = mongoose.model("User", {
