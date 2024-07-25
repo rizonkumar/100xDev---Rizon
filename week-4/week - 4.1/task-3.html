@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task - 3</title>
+  </head>
+  <script>
+    async function calculateSum() {
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      // fetch to get the calcualion logic
+      const response = await fetch(
+        "https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b
+      );
+      const ans = await response.text();
+      document.getElementById("finalSum").innerHTML = ans;
+    }
+  </script>
+  <body>
+    <input type="text" placeholder="First Number" id="firstNumber" />
+    <input type="text" placeholder="Second Number" id="secondNumber" />
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div id="finalSum"></div>
+  </body>
+</html>

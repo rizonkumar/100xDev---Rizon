@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task - 1</title>
+  </head>
+  <script>
+    function calculateSum() {
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      const element = document.getElementById("finalSum");
+      element.innerHTML = parseInt(a) + parseInt(b);
+      console.log("Element", element);
+    }
+  </script>
+  <body>
+    <input type="text" placeholder="First Number" id="firstNumber" />
+    <input type="text" placeholder="Second Number" id="secondNumber" />
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div id="finalSum"></div>
+  </body>
+</html>
